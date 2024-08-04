@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { getDocs, collection } from 'firebase/firestore';
 import Pagination from '@/components/Pagination';
-import { db } from '@/firebase'; // Ensure you have the correct path to your Firestore instance
+import Link from 'next/link';
+import { db } from '../../lib/firebase'; // Ensure you have the correct path to your Firestore instance  
 
 export default function InventoryList() {
     const [items, setItems] = useState([]);
