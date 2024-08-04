@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { collection, getDocs, query, where } from 'firebase/firestore';
-import { db } from '../../lib/firebase';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { getDocs, collection } from 'firebase/firestore';
 import Pagination from '@/components/Pagination';
+import { db } from '@/firebase'; // Ensure you have the correct path to your Firestore instance
 
 export default function InventoryList() {
     const [items, setItems] = useState([]);
