@@ -26,7 +26,7 @@ export default function InventoryList() {
     };
 
     const filteredItems = items.filter(item =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        item.name && item.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
         (filter === 'All' || item.status === filter)
     );
 
